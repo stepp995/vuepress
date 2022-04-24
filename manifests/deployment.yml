@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "gggt-3f8a"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "gggt-3f8a"
+  template:
+    metadata:
+      labels:
+        app: "gggt-3f8a"
+    spec:
+      containers:
+        - name: "gggt-3f8a"
+          image: "mylzacr.azurecr.io/gggt"
+          ports:
+          - containerPort: 80
